@@ -3,52 +3,52 @@ import { motion } from "framer-motion";
 const videos = [
   {
     title: "Excellent Choice Land Investment",
-    embed: "https://www.youtube.com/embed/CBWvZtAa_Kg",
-    description: "AI-generated promotional video designed to showcase real estate opportunities and attract potential investors through clear, engaging messaging.",
-    tags: ["Real Estate", "AI Video", "Marketing"]
+    embedUrl: "https://www.youtube.com/embed/CBWvZtAa_Kg?modestbranding=1&rel=0&showinfo=0",
+    description: "Data-driven promotional video designed to showcase real estate opportunities and attract potential investors.",
+    tags: ["Real Estate", "Strategic Video", "Marketing"]
   },
   {
     title: "Monross Hardware",
-    embed: "https://www.youtube.com/embed/OMU49Qz3OTg",
-    description: "AI-powered product marketing video highlighting hardware products to increase visibility and customer engagement.",
-    tags: ["Retail", "AI Marketing", "Product Ads"]
+    embedUrl: "https://www.youtube.com/embed/OMU49Qz3OTg?modestbranding=1&rel=0&showinfo=0",
+    description: "Algorithmic product marketing video highlighting hardware products to increase visibility and engagement.",
+    tags: ["Retail", "Data Analytics", "Product Ads"]
   },
   {
     title: "Oloitoktok Campaign",
-    embed: "https://www.youtube.com/embed/_Njs_TRgdqk",
-    description: "A location-based promotional video using AI to present local opportunities and drive awareness through storytelling.",
-    tags: ["Location Marketing", "AI Video", "Branding"]
+    embedUrl: "https://www.youtube.com/embed/_Njs_TRgdqk?modestbranding=1&rel=0&showinfo=0",
+    description: "Location-based promotional video using data insights to present local opportunities and drive awareness through storytelling.",
+    tags: ["Location Marketing", "Analytics", "Branding"]
   },
   {
     title: "Tosh Baby Shop",
-    embed: "https://www.youtube.com/embed/5XDLqEfVyf4",
-    description: "AI-generated ad crafted to promote baby products with a warm, engaging tone that connects with target customers.",
-    tags: ["E-commerce", "AI Ads", "Retail"]
+    embedUrl: "https://www.youtube.com/embed/5XDLqEfVyf4?modestbranding=1&rel=0&showinfo=0",
+    description: "Strategic ad crafted to promote baby products with a warm, engaging tone optimized for peak impression rates.",
+    tags: ["E-commerce", "Metrics-Driven", "Retail"]
   },
   {
     title: "Nilzan Supermarket",
-    embed: "https://www.youtube.com/embed/LPNSqaJGcXQ",
-    description: "AI marketing video designed to showcase supermarket products and attract customers through visual storytelling.",
-    tags: ["Supermarket", "AI Marketing", "Ads"]
+    embedUrl: "https://www.youtube.com/embed/LPNSqaJGcXQ?modestbranding=1&rel=0&showinfo=0",
+    description: "Targeted marketing video designed to showcase supermarket products and attract high-value customers.",
+    tags: ["Supermarket", "Conversion", "Ads"]
   },
   {
     title: "Vintage Mabati",
-    embed: "https://www.youtube.com/embed/OaqvBugmEjY",
-    description: "AI-powered promotional content highlighting construction materials with clear messaging and strong visual appeal.",
-    tags: ["Construction", "AI Ads", "Product Marketing"]
+    embedUrl: "https://www.youtube.com/embed/OaqvBugmEjY?modestbranding=1&rel=0&showinfo=0",
+    description: "Data-backed promotional content highlighting construction materials with clear messaging and strong visual appeal.",
+    tags: ["Construction", "Marketing Strategy", "Product Marketing"]
   },
   {
     title: "OMO Campaign",
-    embed: "https://www.youtube.com/embed/vBZ5n6p46po",
-    description: "Creative AI-driven advertisement focused on brand awareness and engaging storytelling for consumer products.",
-    tags: ["FMCG", "AI Marketing", "Branding"]
+    embedUrl: "https://www.youtube.com/embed/vBZ5n6p46po?modestbranding=1&rel=0&showinfo=0",
+    description: "Creative, analytics-driven advertisement focused on brand awareness and engaging storytelling.",
+    tags: ["FMCG", "Strategic Growth", "Branding"]
   }
 ];
 
 const AIMarketingSection = () => {
   return (
-    <section id="ai-marketing" className="section-padding bg-muted/10">
-      <div className="container mx-auto">
+    <section id="marketing-action" className="section-padding relative">
+      <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,55 +56,73 @@ const AIMarketingSection = () => {
           className="text-center mb-10"
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Video Marketing
+            Case Studies
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">
-            AI Marketing & Automation in <span className="gradient-text">Action</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2 mb-4">
+            Data-Driven Marketing & <span className="gradient-text">Automation</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            I create AI-powered videos that help businesses capture attention, communicate value clearly, and increase engagement.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+            I create targeted, data-backed videos that help businesses capture attention, communicate value clearly, and empirically increase engagement.
           </p>
-          
-          <div className="mt-8 inline-block p-5 rounded-2xl glass-card border border-primary/20 bg-primary/5 shadow-sm">
-            <p className="text-foreground font-medium text-lg md:text-xl">
-              <span className="font-semibold text-primary">Struggling to market your product?</span> I create AI-powered videos that capture attention and drive results.
-            </p>
-          </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Extra Conversion Element */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="glass-card p-6 md:p-8 rounded-2xl mb-14 text-center max-w-3xl mx-auto relative overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 opacity-50 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 relative z-10 text-foreground">
+            Struggling to market your product seamlessly?
+          </h3>
+          <p className="text-muted-foreground relative z-10 font-medium">
+            Let's build data-driven videos that capture attention and drive measurable results.
+          </p>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videos.map((video, index) => (
             <motion.div
-              key={video.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card overflow-hidden hover-lift group rounded-2xl flex flex-col border border-glass-border shadow-soft"
+              className="glass-card rounded-2xl overflow-hidden hover-lift flex flex-col group border border-glass-border/50 relative shadow-soft"
             >
-              <div className="aspect-video w-full relative bg-black">
+              {/* Overlay blue/purple subtle gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              
+              {/* Video Embed */}
+              <div className="aspect-video w-full overflow-hidden bg-black/10 relative z-10">
                 <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src={video.embed}
+                  src={video.embedUrl}
                   title={video.title}
-                  frameBorder="0"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="w-full h-full border-0 absolute inset-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 ></iframe>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow bg-card/50">
-                <h3 className="font-heading font-semibold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
+              <div className="p-6 flex flex-col flex-grow relative z-10 bg-background/50 backdrop-blur-sm">
+                <h3 className="font-heading font-semibold text-lg text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                   {video.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-5 flex-grow leading-relaxed">
+                <p className="text-muted-foreground text-sm mb-6 flex-grow leading-relaxed">
                   {video.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-glass-border">
-                  {video.tags.map((tag) => (
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {video.tags.map((tag, tagIndex) => (
                     <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm shadow-sm"
+                      key={tagIndex}
+                      className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-medium tracking-wide shadow-sm"
                     >
                       {tag}
                     </span>
