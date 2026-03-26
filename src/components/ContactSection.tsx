@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Download } from "lucide-react";
+import { Mail, Phone, Linkedin, Download, ExternalLink } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -55,16 +55,35 @@ const ContactSection = () => {
           </a>
         </motion.div>
 
-        <motion.a
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          href="#"
-          className="inline-flex items-center gap-2 gradient-bg text-primary-foreground font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity"
+          className="flex flex-col items-center gap-4"
         >
-          <Download size={18} /> Download CV
-        </motion.a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/BONIFACE THUO CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-primary text-primary hover:bg-primary/10 font-semibold px-8 py-3.5 rounded-lg transition-colors w-full sm:w-auto"
+            >
+              <ExternalLink size={18} /> View Full Resume
+            </a>
+            <a
+              href="/BONIFACE THUO CV.pdf"
+              download="BONIFACE THUO CV.pdf"
+              className="inline-flex items-center justify-center gap-2 gradient-bg text-primary-foreground font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity w-full sm:w-auto"
+            >
+              <Download size={18} /> Download CV
+            </a>
+          </div>
+          <p className="text-xs text-muted-foreground/80 flex items-center justify-center gap-1.5 mt-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+            Available for remote opportunities
+          </p>
+        </motion.div>
       </div>
     </section>
   );
