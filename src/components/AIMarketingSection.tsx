@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
+    title: "Oloitoktok Land Alert",
+    embedUrl: "https://www.youtube.com/embed/jIdTwWGU3Zg?modestbranding=1&rel=0&showinfo=0",
+    description: "A high-impact real estate alert video designed to capture attention quickly and drive interest in land investment opportunities through clear and engaging messaging.",
+    tags: ["Real Estate", "Marketing", "Animation"]
+  },
+  {
     title: "Excellent Choice Land Investment",
     embedUrl: "https://www.youtube.com/embed/CBWvZtAa_Kg?modestbranding=1&rel=0&showinfo=0",
     description: "Data-driven promotional video designed to showcase real estate opportunities and attract potential investors.",
@@ -42,6 +48,12 @@ const videos = [
     embedUrl: "https://www.youtube.com/embed/vBZ5n6p46po?modestbranding=1&rel=0&showinfo=0",
     description: "Creative, analytics-driven advertisement focused on brand awareness and engaging storytelling.",
     tags: ["FMCG", "Strategic Growth", "Branding"]
+  },
+  {
+    title: "Vintage Mabati Mills – Audio to Visual Demo",
+    embedUrl: "https://www.youtube.com/embed/LR6o0TY1Zec?modestbranding=1&rel=0&showinfo=0",
+    description: "A creative production that transforms audio into engaging visual content, showcasing the ability to deliver compelling marketing experiences.",
+    tags: ["Creative", "Animation", "Visual Production"]
   }
 ];
 
@@ -59,7 +71,7 @@ const AIMarketingSection = () => {
             Case Studies
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2 mb-4">
-            Data-Driven Marketing & <span className="gradient-text">Automation</span>
+            AI Marketing & <span className="gradient-text">Animation</span> in Action
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             I create targeted, data-backed videos that help businesses capture attention, communicate value clearly, and empirically increase engagement.
