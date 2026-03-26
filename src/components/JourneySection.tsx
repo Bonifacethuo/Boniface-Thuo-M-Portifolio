@@ -18,8 +18,8 @@ const milestones = [
   },
   {
     year: "2025",
-    title: "AI Workflows & Automation",
-    description: "Designing end-to-end AI-powered automation pipelines for businesses.",
+    title: "Workflows & Automation",
+    description: "Designing end-to-end automation pipelines for businesses.",
   },
 ];
 

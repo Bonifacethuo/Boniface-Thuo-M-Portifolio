@@ -28,7 +28,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block glass-card px-4 py-1.5 text-xs font-medium text-primary mb-6 tracking-wider uppercase">
-            Data Scientist & AI Workflow Specialist
+            Data Scientist & Workflow Specialist
           </span>
         </motion.div>
 

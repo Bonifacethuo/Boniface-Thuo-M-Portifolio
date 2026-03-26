@@ -2,12 +2,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BarChart3, Brain, Bot, ExternalLink, Globe, Mic } from "lucide-react";
 
-type Category = "all" | "analysis" | "ml" | "ai";
+type Category = "all" | "analysis" | "ml" | "automation";
 
 const projects = [
   {
     title: "MapenziLink",
-    category: "ai" as Category,
+    category: "automation" as Category,
     problem: "Need for a streamlined digital connection platform.",
     approach: "React, Node.js, Vercel",
     solution: "Developed a modern, responsive web application with seamless performance.",
@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "Recordly",
-    category: "ai" as Category,
+    category: "automation" as Category,
     problem: "Managing and analyzing audio records efficiently.",
     approach: "Next.js, Tailwind, Vercel",
     solution: "Built an intuitive audio processing and management platform.",
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     title: "Automated Reporting Pipeline",
-    category: "ai" as Category,
+    category: "automation" as Category,
     problem: "Manual weekly reports consuming 15+ hours of analyst time.",
     approach: "Python, SQL, PyTorch",
     solution: "End-to-end automated pipeline from data extraction to report generation.",
@@ -80,11 +80,11 @@ const projects = [
     githubUrl: "https://github.com/Bonifacethuo/Jigsaw---Agile-Community-Rules-Classification",
   },
   {
-    title: "AI Workflow Automation Suite",
-    category: "ai" as Category,
+    title: "Workflow Automation Suite",
+    category: "automation" as Category,
     problem: "Repetitive business processes draining team productivity.",
-    approach: "AI agents, API integrations, Python",
-    solution: "Designed multi-agent AI workflows for content, data entry, and scheduling.",
+    approach: "Automation Agents, API integrations, Python",
+    solution: "Designed multi-agent automation workflows for content, data entry, and scheduling.",
     impact: "40% productivity increase across operations team.",
     icon: Bot,
     githubUrl: "#",
@@ -95,7 +95,7 @@ const categories: { key: Category; label: string }[] = [
   { key: "all", label: "All Projects" },
   { key: "analysis", label: "Data Analysis" },
   { key: "ml", label: "Machine Learning" },
-  { key: "ai", label: "AI & Automation" },
+  { key: "automation", label: "Automation" },
 ];
 
 const ProjectsSection = () => {

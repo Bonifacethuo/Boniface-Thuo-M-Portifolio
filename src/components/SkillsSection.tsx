@@ -10,8 +10,8 @@ const skillGroups = [
     skills: ["Tableau", "Power BI", "Matplotlib", "Plotly", "Streamlit"],
   },
   {
-    title: "AI Tools",
-    skills: ["ChatGPT", "Claude", "LangChain", "Automation Agents", "Prompt Engineering"],
+    title: "Advanced Tools",
+    skills: ["Automation Agents", "Prompt Engineering", "No-code Builders"],
   },
   {
     title: "Data Engineering",

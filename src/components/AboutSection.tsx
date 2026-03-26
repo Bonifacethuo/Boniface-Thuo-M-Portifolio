@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import profileImg from "@/assets/profile.png";
 
 const AboutSection = () => {
-  const tools = ["Python", "SQL", "Power BI", "Tableau", "Scikit-learn", "AI Tools"];
+  const tools = ["Python", "SQL", "Power BI", "Tableau", "Scikit-learn", "Advanced Analytics"];
 
   return (
     <section id="about" className="section-padding">
@@ -39,18 +39,18 @@ const AboutSection = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2 mb-6">
               Data Scientist &{" "}
-              <span className="gradient-text">AI Specialist</span>
+              <span className="gradient-text">Analytics Specialist</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               I'm a Data Scientist with 3+ years of experience turning complex
               datasets into actionable insights. I specialize in data analysis,
-              machine learning, and AI-driven workflows that help businesses make
+              machine learning, and data-driven workflows that help businesses make
               smarter decisions faster.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               My passion lies in solving real-world problems using data — from
               building predictive models to automating entire business processes
-              with AI.
+              gracefully.
             </p>
 
             <div className="flex flex-wrap gap-2">
