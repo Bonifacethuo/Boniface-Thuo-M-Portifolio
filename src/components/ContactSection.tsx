@@ -19,7 +19,7 @@ const ContactSection = () => {
           </h2>
           <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
             Ready to unlock the power of your data? Let's discuss how I can help
-            your business grow with data science and AI.
+            your business grow with data science and advanced analytics.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ const ContactSection = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/BONIFACE THUO CV.pdf"
+              href="/BONIFACE%20THUO%20CV%20.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-primary text-primary hover:bg-primary/10 font-semibold px-8 py-3.5 rounded-lg transition-colors w-full sm:w-auto"
@@ -72,8 +72,8 @@ const ContactSection = () => {
               <ExternalLink size={18} /> View Full Resume
             </a>
             <a
-              href="/BONIFACE THUO CV.pdf"
-              download="BONIFACE THUO CV.pdf"
+              href="/BONIFACE%20THUO%20CV.pdf"
+              download="BONIFACE_THUO_CV.pdf"
               className="inline-flex items-center justify-center gap-2 gradient-bg text-primary-foreground font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition-opacity w-full sm:w-auto"
             >
               <Download size={18} /> Download CV

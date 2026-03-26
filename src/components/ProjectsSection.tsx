@@ -139,15 +139,20 @@ const ProjectsSection = () => {
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((p) => (
-              <motion.div
+            {filtered.map((p) => {
+              const linkTarget = ((p as any).liveUrl || p.githubUrl);
+              return (
+              <motion.a
                 key={p.title}
+                href={linkTarget}
+                target={linkTarget !== "#" ? "_blank" : "_self"}
+                rel="noopener noreferrer"
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass-card p-6 hover-lift group flex flex-col h-full"
+                className="glass-card p-6 hover-lift group flex flex-col h-full cursor-pointer block"
               >
                 {/* Optional Image Preview */}
                 {(p as any).imageUrl && (
@@ -184,16 +189,13 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                <a
-                  href={(p as any).liveUrl || p.githubUrl}
-                  target={((p as any).liveUrl || p.githubUrl) !== "#" ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  className="mt-auto pt-4 flex items-center gap-1 text-primary text-sm opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer inline-flex"
+                <div
+                  className="mt-auto pt-4 flex items-center gap-1 text-primary text-sm opacity-0 group-hover:opacity-100 transition-opacity inline-flex"
                 >
                   {(p as any).liveUrl ? "Visit Live App" : "View details"} <ExternalLink size={14} />
-                </a>
-              </motion.div>
-            ))}
+                </div>
+              </motion.a>
+            )})}
           </AnimatePresence>
         </div>
       </div>
