@@ -30,65 +30,61 @@ const projects = [
     liveUrl: "https://recordly-rho.vercel.app/",
   },
   {
-    title: "Sales Performance Dashboard",
-    category: "analysis" as Category,
-    problem: "Fragmented sales data across multiple platforms making it impossible to track KPIs.",
-    approach: "Python, SQL, Power BI",
-    solution: "Built an interactive real-time dashboard consolidating all sales channels.",
-    impact: "30% faster decision-making, identified underperforming regions.",
-    icon: BarChart3,
-    githubUrl: "#",
-  },
-  {
-    title: "Customer Churn Prediction Model",
+    title: "SyriaTel Customer Churn Prediction",
     category: "ml" as Category,
-    problem: "High customer churn rate with no early warning system.",
-    approach: "Python, Scikit-learn, Pandas",
-    solution: "Developed a classification model predicting churn 30 days in advance.",
-    impact: "Reduced churn by 18% through targeted retention campaigns.",
+    description: "A machine learning project that predicts customer churn in the telecom industry, enabling targeted retention strategies and reducing revenue loss.",
+    tools: ["Python", "Scikit-learn", "Pandas"],
     icon: Brain,
-    githubUrl: "https://github.com/Bonifacethuo/Phase-3-Project",
+    githubUrl: "https://github.com/Bonifacethuo/SyriaTel-Customer-Churn-Prediction",
   },
   {
-    title: "Automated Reporting Pipeline",
-    category: "automation" as Category,
-    problem: "Manual weekly reports consuming 15+ hours of analyst time.",
-    approach: "Python, SQL, PyTorch",
-    solution: "End-to-end automated pipeline from data extraction to report generation.",
-    impact: "Saved 60+ hours/month, eliminated human error in reporting.",
-    icon: Bot,
-    githubUrl: "https://github.com/Bonifacethuo/Barbados-Lands-and-Surveys-Plot-Automation-Challenge-1",
-  },
-  {
-    title: "Market Basket Analysis",
+    title: "Aviation Accident Analysis & Risk Assessment",
     category: "analysis" as Category,
-    problem: "Retail client needed to understand product purchase patterns.",
-    approach: "Python, Association Rules, Tableau",
-    solution: "Applied Apriori algorithm to discover cross-selling opportunities.",
-    impact: "15% increase in average basket value through strategic product placement.",
+    description: "Data analysis project identifying low-risk aircraft and key safety patterns to support strategic aviation investment decisions.",
+    tools: ["Python", "Data Analysis", "Visualization"],
     icon: BarChart3,
-    githubUrl: "#",
+    githubUrl: "https://github.com/Bonifacethuo/Aviation-Accident-Analysis.git",
   },
   {
-    title: "Sentiment Analysis Engine",
-    category: "ml" as Category,
-    problem: "Brand needed real-time understanding of customer sentiment.",
-    approach: "Python, NLP, BERT, Transformers",
-    solution: "Built NLP pipeline analyzing social media and review sentiment.",
-    impact: "Real-time sentiment tracking across 10K+ daily mentions.",
-    icon: Brain,
-    githubUrl: "https://github.com/Bonifacethuo/Jigsaw---Agile-Community-Rules-Classification",
-  },
-  {
-    title: "Workflow Automation Suite",
+    title: "Automated Python Scripts",
     category: "automation" as Category,
-    problem: "Repetitive business processes draining team productivity.",
-    approach: "Automation Agents, API integrations, Python",
-    solution: "Designed multi-agent automation workflows for content, data entry, and scheduling.",
-    impact: "40% productivity increase across operations team.",
+    description: "Automation scripts for extracting and analyzing data from PowerPoint and Excel files, improving efficiency in data processing tasks.",
+    tools: ["Python", "XML Parsing", "Pandas"],
     icon: Bot,
-    githubUrl: "#",
+    githubUrl: "https://github.com/Bonifacethuo/Automated-Python-Scripts.git",
   },
+  {
+    title: "OSWorld SFT - Turing Tooling",
+    category: "ml" as Category,
+    description: "A tooling system for collecting, validating, and refining supervised fine-tuning (SFT) datasets for AI training workflows.",
+    tools: ["Python", "Jupyter", "Data Pipelines"],
+    icon: Bot,
+    githubUrl: "https://github.com/Bonifacethuo/Boniface-Thuo-Turing",
+  },
+  {
+    title: "Finance RAG Chatbot",
+    category: "ml" as Category,
+    description: "A retrieval-augmented chatbot that processes financial documents and provides accurate, context-aware answers via API.",
+    tools: ["Python", "LLM", "Vector Embeddings"],
+    icon: Brain,
+    githubUrl: "https://github.com/Bonifacethuo/Chatbot-1",
+  },
+  {
+    title: "Solar Panel Detection",
+    category: "ml" as Category,
+    description: "A computer vision model for detecting solar panels from satellite imagery to support renewable energy tracking.",
+    tools: ["Python", "Computer Vision", "Deep Learning"],
+    icon: Brain,
+    githubUrl: "https://github.com/Bonifacethuo/Lacuna-Solar-Survey-Challenge-Zindi-Competition-",
+  },
+  {
+    title: "Tableau Aviation Dashboard",
+    category: "analysis" as Category,
+    description: "Interactive dashboard visualizing aviation accident trends, risk factors, and safety insights for decision-making.",
+    tools: ["Tableau", "Data Visualization"],
+    icon: BarChart3,
+    liveUrl: "https://public.tableau.com/app/profile/boniface.thuo/viz/ProjectTableau_17273446666590/Dashboard1",
+  }
 ];
 
 const categories: { key: Category; label: string }[] = [
@@ -170,22 +166,34 @@ const ProjectsSection = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-3 text-sm flex-grow">
-                  <div>
-                    <span className="text-primary font-medium">Problem: </span>
-                    <span className="text-muted-foreground">{p.problem}</span>
-                  </div>
-                  <div>
-                    <span className="text-primary font-medium">Tools: </span>
-                    <span className="text-muted-foreground">{p.approach}</span>
-                  </div>
-                  <div>
-                    <span className="text-primary font-medium">Solution: </span>
-                    <span className="text-muted-foreground">{p.solution}</span>
-                  </div>
-                  <div className="pt-2 border-t border-glass-border">
-                    <span className="text-accent font-semibold">Impact: </span>
-                    <span className="text-foreground">{p.impact}</span>
+                <div className="space-y-3 text-sm flex-grow flex flex-col">
+                  {(p as any).description ? (
+                    <div className="text-muted-foreground mb-2">{(p as any).description}</div>
+                  ) : (
+                    <>
+                      <div>
+                        <span className="text-primary font-medium">Problem: </span>
+                        <span className="text-muted-foreground">{p.problem}</span>
+                      </div>
+                      <div>
+                        <span className="text-primary font-medium">Solution: </span>
+                        <span className="text-muted-foreground">{p.solution}</span>
+                      </div>
+                      <div className="pt-2 border-t border-glass-border mb-2">
+                        <span className="text-accent font-semibold">Impact: </span>
+                        <span className="text-foreground">{p.impact}</span>
+                      </div>
+                    </>
+                  )}
+
+                  <div className="mt-auto pt-4 border-t border-glass-border/50">
+                    <div className="flex flex-wrap gap-2">
+                      {((p as any).tools || (p.approach ? p.approach.split(', ') : [])).map((tool: string, i: number) => (
+                        <span key={i} className="px-2 py-1 text-xs rounded-md bg-secondary/50 text-secondary-foreground border border-border/50 backdrop-blur-sm">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
