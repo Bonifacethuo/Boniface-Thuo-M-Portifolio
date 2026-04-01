@@ -81,7 +81,7 @@ const ContactSection = () => {
           </div>
           <p className="text-xs text-muted-foreground/80 flex items-center justify-center gap-1.5 mt-2">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-            Available for remote opportunities
+            Excited to contribute in remote, hybrid, or on-site roles.
           </p>
         </motion.div>
       </div>
