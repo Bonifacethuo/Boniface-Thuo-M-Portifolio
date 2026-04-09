@@ -6,6 +6,16 @@ type Category = "all" | "analysis" | "ml" | "automation";
 
 const projects = [
   {
+    title: "Spotify Top 100 Artist Dashboard & Analysis",
+    category: "analysis" as Category,
+    description: "A professional data analysis dashboard visualizing the top 100 Spotify artists. Features interactive pivot tables and KPI tracking for streaming performance.",
+    tools: ["Excel", "Data Analysis", "Pivot Tables", "Visualization"],
+    icon: BarChart3,
+    githubUrl: "https://github.com/Bonifacethuo/Spotify-Top-100-Artist-Dashboard-Data-Analysis-Visualization",
+    imageUrl: "/Screenshot-Pivot.png",
+    liveUrl: "/SpotifyDashboard.xlsx",
+  },
+  {
     title: "MapenziLink",
     category: "automation" as Category,
     problem: "Need for a streamlined digital connection platform.",
@@ -136,7 +146,16 @@ const ProjectsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
             {filtered.map((p) => {
-              const linkTarget = ((p as any).liveUrl || p.githubUrl);
+              let linkTarget = ((p as any).liveUrl || p.githubUrl);
+              const isExcel = (p as any).liveUrl?.endsWith('.xlsx');
+              
+              if (isExcel) {
+                // Construct office viewer URL with the specific Dashboard sheet
+                const absoluteUrl = (p as any).liveUrl.startsWith('/') 
+                  ? window.location.origin + (p as any).liveUrl 
+                  : (p as any).liveUrl;
+                linkTarget = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(absoluteUrl)}&wdActiveSheet=Dashboard`;
+              }
               return (
               <motion.a
                 key={p.title}
@@ -200,7 +219,7 @@ const ProjectsSection = () => {
                 <div
                   className="mt-auto pt-4 flex items-center gap-1 text-primary text-sm opacity-0 group-hover:opacity-100 transition-opacity inline-flex"
                 >
-                  {(p as any).liveUrl ? "Visit Live App" : "View details"} <ExternalLink size={14} />
+                  {isExcel ? "View Dashboard" : (p as any).liveUrl ? "Visit Live App" : "View details"} <ExternalLink size={14} />
                 </div>
               </motion.a>
             )})}
